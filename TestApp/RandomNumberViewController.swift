@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RandomNumberViewController: UIViewController {
 
     @IBOutlet var lowerBoundField: UITextField!
     @IBOutlet var upperBoundField: UITextField!
@@ -28,22 +28,31 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func generateUInt32BetweenBounds(lowerBound: UInt32, upperBound: UInt32) -> UInt32 {
-        let upperBoundBumped: UInt32 = upperBound + 1
-        let difference: UInt32 = upperBoundBumped - lowerBound
-        return UInt32(arc4random_uniform(upperBoundBumped - difference)) + lowerBound
+    func generateIntBetweenBounds(lowerBound: Int, upperBound: Int) -> Int {
+        let upperBoundBumped: Int = upperBound + 1
+        let difference: Int = upperBoundBumped - lowerBound
+        return Int(arc4random_uniform(UInt32(upperBoundBumped - difference))) + lowerBound
     }
     
+    @IBAction func dismissKeyboard () {
+        view.endEditing(true)
+    }
     
     @IBAction func generateRandomNumber(){
-        guard lowerBoundField.text != nil && upperBoundField.text != nil else {
+        dismissKeyboard()
+        
+        guard let lowerBound = lowerBoundField.text?.integer, let upperBound = upperBoundField.text?.integer else {
             return
         }
-        let lowerBound: UInt32 = UInt32(lowerBoundField.text!)!
-        let upperBound: UInt32 = UInt32(upperBoundField.text!)!
         
-        displayNumberLabel.text = String(generateUInt32BetweenBounds(lowerBound: lowerBound, upperBound: upperBound))
+        displayNumberLabel.text = String(generateIntBetweenBounds(lowerBound: lowerBound, upperBound: upperBound))
     }
 
+}
+
+extension String {
+    var integer: Int? {
+        return Int(self)
+    }
 }
 
