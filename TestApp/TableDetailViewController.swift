@@ -42,5 +42,9 @@ class TableDetailViewController: UIViewController {
             self.load_image(urlString: movieImage)
         }
     }
+    
+    @IBAction func backToTable (sender: UIButton!) {
+        performSegue(withIdentifier: "tableView", sender: self)
+    }
 }
 
