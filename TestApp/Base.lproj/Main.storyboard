@@ -263,7 +263,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TK8-8o-MFz" userLabel="Table">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Nib-tb-Gpo" style="IBUITableViewCellStyleDefault" id="gc4-Ld-MHg" userLabel="Cell">
@@ -376,12 +376,11 @@
                         <outlet property="imageView" destination="RdC-5f-5sq" id="yVe-2p-KXd"/>
                         <outlet property="titleLabel" destination="ffM-S2-DpI" id="Etf-CF-Wrc"/>
                         <outlet property="yearLabel" destination="rZt-3t-QQr" id="8Hc-U3-aD9"/>
-                        <segue destination="jPX-WH-lP7" kind="show" id="ES0-iE-Ecm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jmh-M0-BiJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1973.5999999999999" y="902.69865067466276"/>
+            <point key="canvasLocation" x="1974" y="903"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xea-5K-dac">
@@ -404,7 +403,4 @@
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="ES0-iE-Ecm"/>
-    </inferredMetricsTieBreakers>
 </document>

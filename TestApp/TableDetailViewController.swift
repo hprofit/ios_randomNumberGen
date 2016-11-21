@@ -44,7 +44,8 @@ class TableDetailViewController: UIViewController {
     }
     
     @IBAction func backToTable (sender: UIButton!) {
-        performSegue(withIdentifier: "tableView", sender: self)
+//        performSegue(withIdentifier: "tableView", sender: self)
+        dismiss(animated: true, completion: nil)
     }
 }
 
